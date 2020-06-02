@@ -1,0 +1,4 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.7)
+PROJECT(tradingConfig)
+
+INSTALL(FILES tradingConfig.json DESTINATION "configFiles")

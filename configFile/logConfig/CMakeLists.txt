@@ -1,0 +1,4 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.7)
+PROJECT(logConfig)
+
+INSTALL(FILES loggerConfig.properties DESTINATION "configFiles")

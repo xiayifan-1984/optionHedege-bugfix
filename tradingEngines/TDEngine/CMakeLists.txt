@@ -1,0 +1,9 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.7)
+PROJECT(TDEngine)
+
+LINK_DIRECTORIES(${BUILD_DIR}/lib/memoryManage)
+LINK_DIRECTORIES(${BUILD_DIR}/lib/boost)
+LINK_DIRECTORIES(${BUILD_DIR}/lib/tradingEngines)
+
+ADD_EXECUTABLE(TDEngine main.cpp)
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} journal optionHedgelog paged ctpmd ctptd ${Boost_LIBRARIES})

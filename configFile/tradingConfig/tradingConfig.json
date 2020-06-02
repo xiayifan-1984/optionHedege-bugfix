@@ -1,0 +1,93 @@
+{
+  "md": {
+    "ctp": {
+      "FrontUri": "tcp://180.168.146.187:10131",
+      "UserId": "",
+      "BrokerId": "88888",
+      "Password": ""
+    }
+  },
+  "td": {
+    "ctp": {
+      "FrontUri": "tcp://180.168.146.187:10130",
+      "FrontUriKN": "tcp://106.14.79.191:9610",
+      "NeedAuth": true,
+      "NeedSettleConfirm": true,
+      "StrategyRange": [
+        {
+          "name": "directkafkastrategy",
+          "rid_start": 4000000
+        },
+        {
+          "name": "testingStrategykn",
+          "rid_start": 5000000
+        },
+        {
+          "name": "TwapKafkaStrategy",
+          "rid_start": 6000000
+        }
+      ],
+      "accounts": [
+        {
+          "info": {
+            "UserId": "062716",
+            "InvestorId": "062716",
+            "BrokerId": "9999",
+            "Password": "123456",
+            "appID": "simnow_client_test",
+            "AuthCode": "0000000000000000",
+            "AccountType": "CTP"
+          },
+          "clients": [ "directkafkastrategy", "TwapKafkaStrategy" ],
+          "is_default": true
+        }
+      ],
+      "FeeSetup": {
+        "stock": {
+          "type": "amount",
+          "fee_multi": 0.0003,
+          "ctr_multi": 1,
+          "min_fee": 0
+        },
+        "future": {
+          "type": "amount",
+          "fee_multi": [ 0.000023, 0.00069, 0.000023 ],
+          "ctr_multi": 200,
+          "min_fee": 0
+        },
+        "future_exotic": {
+          "rb": {
+            "type": "amount",
+            "fee_multi": 0.0001,
+            "ctr_multi": 10,
+            "min_fee": 0
+          },
+          "rb1801": {
+            "type": "amount",
+            "fee_multi": [ 0.0001, 0.0005, 0.0001 ],
+            "ctr_multi": 10,
+            "min_fee": 0
+          },
+          "c": {
+            "type": "volume",
+            "fee_multi": 1.2,
+            "ctr_multi": 10,
+            "min_fee": 0
+          },
+          "c1803": {
+            "type": "volume",
+            "fee_multi": 0.2,
+            "ctr_multi": 10,
+            "min_fee": 0
+          },
+          "ic": {
+            "type": "amount",
+            "fee_multi": [ 0.000023, 0.00069, 0.000023 ],
+            "ctr_multi": 200,
+            "min_fee": 0
+          }
+        }
+      }
+    }
+  }
+}
